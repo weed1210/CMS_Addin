@@ -1,4 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+// Load environment variables from .env file
+dotenv.config();
 
 module.exports = {
   entry: './src/index.js', // Entry point for your React code
@@ -18,10 +23,30 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          //{
+          //  loader: "postcss-loader",
+          //  options: {
+          //    plugins: () => [
+          //      require("autoprefixer")()
+          //    ],
+          //  },
+          //},
+        ]
+      },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
+  ],
   mode: 'development', // Change to 'production' for production builds
 };

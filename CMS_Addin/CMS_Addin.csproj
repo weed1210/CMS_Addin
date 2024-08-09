@@ -42,18 +42,18 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="OutlookWebAddIn1Manifest\SharePointProjectItem.spdata">
+    <None Include="AddinManifest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a8112752-18d9-4d89-858c-6e1508834e3d}</SharePointProjectItemId>
     </None>
-    <Content Include="OutlookWebAddIn1Manifest\OutlookWebAddIn1.xml">
+    <Content Include="AddinManifest\Addin.xml">
       <OpcRelationship>manifest-oemanifest</OpcRelationship>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OutlookWebAddIn1Web\OutlookWebAddIn1Web.csproj">
+    <ProjectReference Include="..\CMS_Addin_Web\CMS_Addin_Web.csproj">
       <Project>{86FF772E-7744-4E86-BB78-B7CC3CDDB63E}</Project>
-      <Name>OutlookWebAddIn1Web</Name>
+      <Name>CMS_Addin_Web</Name>
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <OutputItemType>SharePointWebProjectOutput</OutputItemType>

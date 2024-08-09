@@ -7,7 +7,17 @@
   <link href="Content/Button.css" rel="stylesheet" type="text/css" />
   <link href="Content/MessageBanner.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
+  <script>
+    window.backupHistoryFunctions = {};
+    window.backupHistoryFunctions.pushState = window.history.pushState;
+    window.backupHistoryFunctions.replaceState = window.history.replaceState;
+  </script>
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script> <!-- Include Office.js -->
+  <script>
+    window.history.pushState = window.backupHistoryFunctions.pushState;
+    window.history.replaceState = window.backupHistoryFunctions.replaceState;
+    console.log(window.history.replaceState)
+  </script>
 </head>
 <body>
   <div id="root"></div>

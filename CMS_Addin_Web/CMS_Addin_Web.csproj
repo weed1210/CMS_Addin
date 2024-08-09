@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\Button.css" />
     <Content Include="Content\fabric-9.6.0.scoped.css" />
     <Content Include="Content\fabric-9.6.0.scoped.min.css" />
@@ -103,6 +104,7 @@
     <Content Include="Content\sass\mixins\_Animation.Mixins.scss" />
     <Content Include="Content\sass\Fabric.scss" />
     <Content Include="Content\sass\Fabric.Scoped.scss" />
+    <Content Include="eslint.config.mjs" />
     <Content Include="Functions\FunctionFile.html" />
     <Content Include="Functions\FunctionFile.js" />
     <Content Include="Images\Close.png" />
@@ -116,12 +118,19 @@
     <Content Include="MessageRead.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="src\MessageRead.jsx">
+    <Content Include="CMS_Addin_Web.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="OutlookWebAddIn1.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include=".babelrc" />
+    <Content Include=".env" />
+    <Content Include="src\constants\auth.js" />
+    <Content Include="src\pages\loginPage.jsx" />
+    <Content Include="src\pages\projectPage.jsx" />
+    <Content Include="src\services\outlookService.js" />
+    <Content Include="src\services\projectService.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -572,6 +581,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src/**/*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="src\MessageRead.jsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dist/*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="node_modules/*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -621,6 +644,15 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+      <!-- cd $(ProjectDir) &amp;&amp; npm install &amp;&amp; npx webpack -->
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

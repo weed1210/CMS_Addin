@@ -17,7 +17,7 @@
   <ProviderName>John Doe</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="My Office Add-in" />
+  <DisplayName DefaultValue="CMS Addin" />
   <Description DefaultValue="My First Outlook add-in"/>
   <IconUrl DefaultValue="~remoteAppUrl/Images/icon64.png"/>
 

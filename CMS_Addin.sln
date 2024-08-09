@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookWebAddIn1", "OutlookWebAddIn1\OutlookWebAddIn1.csproj", "{97F0E853-5CA0-49F3-9127-DB96ECE9988B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS_Addin", "CMS_Addin\CMS_Addin.csproj", "{97F0E853-5CA0-49F3-9127-DB96ECE9988B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookWebAddIn1Web", "OutlookWebAddIn1Web\OutlookWebAddIn1Web.csproj", "{86FF772E-7744-4E86-BB78-B7CC3CDDB63E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS_Addin_Web", "CMS_Addin_Web\CMS_Addin_Web.csproj", "{86FF772E-7744-4E86-BB78-B7CC3CDDB63E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
