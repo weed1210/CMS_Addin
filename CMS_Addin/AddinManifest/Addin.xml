@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
-<OfficeApp 
-          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
-          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
           xsi:type="MailApp">
 
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
@@ -19,7 +19,8 @@
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
   <DisplayName DefaultValue="CMS Addin" />
   <Description DefaultValue="My First Outlook add-in"/>
-  <IconUrl DefaultValue="~remoteAppUrl/Images/icon64.png"/>
+  <IconUrl DefaultValue="https://png-5.findicons.com/files/icons/201/batman/64/logo.png"/>
+  <HighResolutionIconUrl DefaultValue="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Apps-preferences-desktop-icons-icon.png"/>
 
   <SupportUrl DefaultValue="http://www.contoso.com" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
@@ -29,7 +30,7 @@
     <AppDomain>AppDomain3</AppDomain>
   </AppDomains>
   <!--End Basic Settings. -->
-  
+
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -84,6 +85,7 @@
                     <bt:Image size="16" resid="icon16" />
                     <bt:Image size="32" resid="icon32" />
                     <bt:Image size="80" resid="icon80" />
+                    <bt:Image size="128" resid="icon128" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="messageReadTaskPaneUrl" />
@@ -102,7 +104,8 @@
       <bt:Images>
         <bt:Image id="icon16" DefaultValue="~remoteAppUrl/Images/icon16.png"/>
         <bt:Image id="icon32" DefaultValue="~remoteAppUrl/Images/icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="~remoteAppUrl/Images/icon80.png"/>
+        <bt:Image id="icon64" DefaultValue="~remoteAppUrl/Images/icon64.png"/>
+        <bt:Image id="icon128" DefaultValue="~remoteAppUrl/Images/icon128.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
