@@ -10,11 +10,11 @@
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
 
   <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
-  <Id>e8aa42b5-a25f-459d-a090-095ceb102cc3</Id>
+  <Id>57b1e812-6dc5-4278-b156-c3a81a52af9a</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>1.0.0.0</Version>
-  <ProviderName>John Doe</ProviderName>
+  <Version>1.0.0.1</Version>
+  <ProviderName>CMS</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
   <DisplayName DefaultValue="CMS Addin" />
@@ -42,7 +42,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="~remoteAppUrl/MessageRead.html"/>
+        <SourceLocation DefaultValue="https://cmsaddinweb20240810102622.azurewebsites.net/MessageRead.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -82,8 +82,6 @@
                     <Description resid="paneReadSuperTipDescription" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="icon16" />
-                    <bt:Image size="32" resid="icon32" />
                     <bt:Image size="80" resid="icon80" />
                     <bt:Image size="128" resid="icon128" />
                   </Icon>
@@ -102,14 +100,12 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="~remoteAppUrl/Images/icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="~remoteAppUrl/Images/icon32.png"/>
-        <bt:Image id="icon64" DefaultValue="~remoteAppUrl/Images/icon64.png"/>
-        <bt:Image id="icon128" DefaultValue="~remoteAppUrl/Images/icon128.png"/>
+        <bt:Image id="icon80" DefaultValue="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Apps-preferences-desktop-icons-icon.png"/>
+        <bt:Image id="icon128" DefaultValue="https://png-5.findicons.com/files/icons/201/batman/64/logo.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="~remoteAppUrl/MessageRead.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://cmsaddinweb20240810102622.azurewebsites.net/Functions/FunctionFile.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://cmsaddinweb20240810102622.azurewebsites.net/MessageRead.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>

@@ -131,6 +131,7 @@
     <Content Include="webpack.config.js" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <None Include="Properties\PublishProfiles\CMSAddinWeb20240810102622 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
